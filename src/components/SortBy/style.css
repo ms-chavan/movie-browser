@@ -1,0 +1,11 @@
+.sortByButton {
+  height: 70%;
+  width: 9%;
+  background-color: #fdfdfd;
+  border: solid 0.5px lightgray;
+  border-radius: 5px;
+}
+
+.sortByButtonClicked {
+  background-color: #e7edf7;
+}

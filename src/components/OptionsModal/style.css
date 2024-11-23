@@ -1,0 +1,41 @@
+.optionsModal {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 62px;
+  background-color: white;
+  border: 1px solid lightgray;
+  box-shadow: 0 4px 10px lightgray;
+  border-radius: 4px;
+}
+
+.option {
+  border-bottom: solid 1px #f1f2f4;
+  height: 20px;
+  padding: 0px 25px 0px;
+  font-size: 12px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20px;
+  padding: 10px 8px;
+  font-size: 12px;
+  border-bottom: solid 1px #f1f2f4;
+}
+
+.iconClose {
+  padding-left: 3px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.selectedOption {
+  background-color: #f8f8f9;
+}

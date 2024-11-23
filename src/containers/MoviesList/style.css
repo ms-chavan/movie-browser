@@ -1,0 +1,7 @@
+.leftPanel {
+  width: 50%;
+  min-height: calc(100vh - 72px);
+  border-right: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+}

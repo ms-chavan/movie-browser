@@ -1,0 +1,4 @@
+.contentLayout {
+  display: flex;
+  flex-direction: row;
+}
