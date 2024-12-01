@@ -1,8 +1,8 @@
 import React, { memo, useState } from 'react';
 import './style.css';
 import { OptionsModal } from '../OptionsModal';
-import { sortByOptions } from './constants';
 import { arePropsSameBy } from '../../shared/util';
+import { sortByOptions } from '../../containers/Toolbar/constant';
 
 export const SortBy = memo(({ selectedOption, onSortingOptionChange }) => {
   const options = Object.values(sortByOptions);

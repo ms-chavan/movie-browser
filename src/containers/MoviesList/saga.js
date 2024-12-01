@@ -2,12 +2,12 @@ import { takeEvery, call, put } from 'redux-saga/effects';
 import { fetchMoviesSuccess, fetchMoviesFailure, FETCH_MOVIES_REQUEST } from './actions';
 import { ROMAN } from '../../shared/constant';
 
-const fetchMovies = async () => {
+export const fetchMovies = async () => {
   const response = await fetch('https://swapi.dev/api/films/?format=json');
   return response.json();
 };
 
-function* fetchMoviesSaga() {
+export function* fetchMoviesSaga() {
   try {
     let movies = yield call(fetchMovies);
     if (movies) {

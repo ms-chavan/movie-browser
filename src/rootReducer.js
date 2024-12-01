@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux';
 import movieListReducer from './containers/MoviesList/reducer';
-import { sortByReducer } from './components/SortBy/reducer';
-import { searchReducer } from './components/SearchBar/reducer';
+import { toolbarReducer } from './containers/Toolbar/reducer';
 
 const rootReducer = combineReducers({
   movies: movieListReducer,
-  sortBy: sortByReducer,
-  search: searchReducer,
+  toolbar: toolbarReducer,
 });
 
 export default rootReducer;

@@ -3,7 +3,7 @@ import { selectShouldFetchMovies } from './selector';
 import { useEffect, useMemo, useRef } from 'react';
 import { fetchMoviesRequest } from './actions';
 import { compareAscending, compareDescending } from '../../shared/util';
-import { SORTING_TYPES } from '../../components/SortBy/constants';
+import { SORTING_TYPES } from '../Toolbar/constant';
 
 export const useFetchMovies = () => {
   const dispatch = useDispatch();

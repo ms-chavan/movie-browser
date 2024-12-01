@@ -2,9 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useFetchMovies, useFilterAndSortMovies } from './hooks';
 import './style.css';
-import { selectCurrentSortingOption, selectMovies, selectSearchTerm } from './selector';
+import { selectMovies } from './selector';
 import { MovieRow } from './MovieRow';
 import { NoResultFound } from '../../components/NoResultFound';
+import { selectCurrentSortingOption, selectSearchTerm } from '../Toolbar/selector';
 
 export const MovieList = () => {
   useFetchMovies();

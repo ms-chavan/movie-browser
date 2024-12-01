@@ -3,7 +3,7 @@ import rootReducer from '../../../../rootReducer';
 import { renderWithRedux } from '../../../../shared/testUtil';
 import { MovieRow } from '..';
 import * as MoviesListSelectors from '../../selector';
-import { screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 
 let store, mockMovies;
 
@@ -28,6 +28,14 @@ describe('MovieRow', () => {
 
     expect(title).toBeInTheDocument();
     expect(episode).toBeInTheDocument();
+  });
+
+  test('should highlight movie row when clicked', () => {
+    renderWithRedux(MovieRow, store, { ...mockMovies[0] });
+    const movieRow = screen.getByTestId(/movie-row/i);
+
+    fireEvent.click(movieRow);
+    expect(movieRow).toHaveClass('selectedMovie');
   });
 });
 

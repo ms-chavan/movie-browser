@@ -1,12 +1,12 @@
+import { SORTING_TYPES } from '../../containers/Toolbar/constant';
 import { IconClose } from '../Icons';
 import { ArrowDown, ArrowUp } from '../Icons/index';
-import { SORTING_TYPES } from '../SortBy/constants';
 import './style.css';
 export const OptionsModal = ({ title, options, selectedOption, onClose, onOptionChange }) => {
   return (
-    <div className="optionsModal">
+    <div className="optionsModal" data-testid="optionsModal">
       <div className="header">
-        <span>{title}</span>
+        <span data-testid="modalTitle">{title}</span>
         <span className="iconClose" onClick={onClose}>
           <IconClose />
         </span>

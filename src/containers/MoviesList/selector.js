@@ -12,8 +12,4 @@ export const selectShouldFetchMovies = createSelector(
   }
 );
 
-export const selectCurrentSortingOption = (state) => state.sortBy.selectedOption;
-
-export const selectSearchTerm = (state) => state.search.term;
-
 export const selectMovieInFocus = (state) => state.movies.selectedMovie;

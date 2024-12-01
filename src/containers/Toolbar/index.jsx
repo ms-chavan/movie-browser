@@ -3,9 +3,8 @@ import './style.css';
 import { SearchBar } from '../../components/SearchBar';
 import { SortBy } from '../../components/SortBy';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchTerm } from '../../components/SearchBar/action';
-import { selectCurrentSortingOption, selectSearchTerm } from '../MoviesList/selector';
-import { setSelectedSortingOption } from '../../components/SortBy/action';
+import { selectCurrentSortingOption, selectSearchTerm } from './selector';
+import { setSearchTerm, setSelectedSortingOption } from './action';
 
 export const Toolbar = React.memo(() => {
   const dispatch = useDispatch();

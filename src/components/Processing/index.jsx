@@ -8,5 +8,15 @@ export const Processing = memo(({ children, isLoading }) => {
 
   useDotsAnimation(updateDots, dots);
 
-  return <>{isLoading ? <div className="processingScreen">{dots}</div> : children}</>;
+  return (
+    <>
+      {isLoading ? (
+        <div data-testid="processingAnimation" className="processingScreen">
+          {dots}
+        </div>
+      ) : (
+        children
+      )}
+    </>
+  );
 });
