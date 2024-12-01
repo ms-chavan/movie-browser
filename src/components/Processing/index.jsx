@@ -4,9 +4,9 @@ import './style.css';
 
 export const Processing = memo(({ children, isLoading }) => {
   const [dots, setDots] = useState('.');
-  const updateDots = useCallback((newDots) => setDots(newDots), []);
+  const updateDots = useCallback((newDots) => setDots(newDots), [isLoading, dots]);
 
-  useDotsAnimation(updateDots, dots);
+  useDotsAnimation(updateDots, dots, isLoading);
 
   return (
     <>

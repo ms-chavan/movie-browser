@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 
-export const useDotsAnimation = (updateDots, prevDots) => {
+export const useDotsAnimation = (updateDots, prevDots, isLoading) => {
   useEffect(() => {
     function animate() {
-      updateDots(prevDots.length < 3 ? prevDots.concat('.') : '.');
+      if (isLoading) {
+        console.info('rendser');
+        updateDots(prevDots.length < 3 ? prevDots.concat('.') : '.');
+      }
     }
 
     const animationInterval = setInterval(animate, 300);
