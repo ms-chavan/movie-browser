@@ -1,14 +1,10 @@
-import { useState } from 'react';
+import { memo } from 'react';
 import './style.css';
+import { arePropsSameBy } from '../../shared/util';
 
-export const SearchBar = ({ onSearchTermChange }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
+export const SearchBar = memo(({ searchTerm, onSearchTermChange }) => {
   const handleSearchTermChange = (event) => {
-    const newTerm = event.target.value;
-    setSearchTerm(newTerm);
-
-    onSearchTermChange(newTerm);
+    onSearchTermChange(event.target.value);
   };
 
   return (
@@ -21,4 +17,4 @@ export const SearchBar = ({ onSearchTermChange }) => {
       className="inputStyle"
     />
   );
-};
+}, arePropsSameBy('searchTerm'));

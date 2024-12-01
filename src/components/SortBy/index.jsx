@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import './style.css';
 import { OptionsModal } from '../OptionsModal';
 import { sortByOptions } from './constants';
+import { arePropsSameBy } from '../../shared/util';
 
-export const SortBy = ({ selectedOption, onSortingOptionChange }) => {
+export const SortBy = memo(({ selectedOption, onSortingOptionChange }) => {
   const options = Object.values(sortByOptions);
 
   const [open, setOpen] = useState(false);
@@ -34,4 +35,4 @@ export const SortBy = ({ selectedOption, onSortingOptionChange }) => {
       )}
     </React.Fragment>
   );
-};
+}, arePropsSameBy('selectedOption'));

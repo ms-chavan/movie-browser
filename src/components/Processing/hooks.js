@@ -1,19 +1,15 @@
 import { useEffect } from 'react';
 
-export const useDotsAnimation = (setDots) => {
+export const useDotsAnimation = (updateDots, prevDots) => {
   useEffect(() => {
     function animate() {
-      setDots((prevDots) => {
-        if (prevDots.length < 3) {
-          return prevDots.concat('.');
-        } else {
-          return '.';
-        }
-      });
+      updateDots(prevDots.length < 3 ? prevDots.concat('.') : '.');
     }
 
     const animationInterval = setInterval(animate, 300);
 
-    return () => clearInterval(animationInterval);
-  }, []);
+    return () => {
+      clearInterval(animationInterval);
+    };
+  }, [updateDots]);
 };

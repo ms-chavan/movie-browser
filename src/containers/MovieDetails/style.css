@@ -13,8 +13,8 @@
   font-weight: 500;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .rightPanel {
-    width: 100%;
+    width: calc(100% - 24px);
   }
 }

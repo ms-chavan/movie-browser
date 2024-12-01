@@ -1,6 +1,6 @@
 import React from 'react';
-
 import './style.css';
+
 export const MovieBrowserLayout = ({ Toolbar, LeftPanel, RightPanel }) => {
   return (
     <React.Fragment>

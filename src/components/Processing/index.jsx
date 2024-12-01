@@ -1,12 +1,12 @@
-import { memo, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { useDotsAnimation } from './hooks';
 import './style.css';
-import { arePropsSameBy } from '../../shared/util';
 
 export const Processing = memo(({ children, isLoading }) => {
   const [dots, setDots] = useState('.');
+  const updateDots = useCallback((newDots) => setDots(newDots), []);
 
-  useDotsAnimation(setDots);
+  useDotsAnimation(updateDots, dots);
 
   return <>{isLoading ? <div className="processingScreen">{dots}</div> : children}</>;
-}, arePropsSameBy('isLoading'));
+});

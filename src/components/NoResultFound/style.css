@@ -3,5 +3,6 @@
   min-height: 100%;
   min-width: 100%;
   align-items: center;
+  font-weight: 500;
   justify-content: center;
 }
