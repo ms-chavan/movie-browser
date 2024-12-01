@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# Key Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. The app is written using `Javascript, ReactJS, Redux, Saga`
+2. Test cases are written using `jest, react-testing-library`
+3. This app `does not use` any third party component libraries
+4. Additional features
+   i. sort by allows `ascending and descending sorting` on episode & year
+   ii. a `simple custom built loading animation` is shown until the API response is being fetched
+5. Application is `responsive` and adjusts components when viewed `on less than 650px width`.
+6. Selected movie `row is highlighted` when clicked
 
 ## Available Scripts
 
